@@ -1,10 +1,9 @@
-Date
+Timer
 ========================================
 
 ## About
 
-This library comprises two distinct libraries. The old `Date` library, and the new library. It supports most date
-functionality.
+This library supports timer functionality.
 
 ## Installing
 
