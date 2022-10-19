@@ -20,4 +20,24 @@ class StopwatchTest extends TestCase
 
         $this->assertEquals($secondsPassed, $stop - $start);
     }
+
+    public function testTimerMaxTimeHasPassed()
+    {
+        $stopwatch = new Stopwatch(2);
+        $stopwatch->start();
+
+        sleep(3);
+
+        $this->assertTrue($stopwatch->hasMaxTimePassed());
+    }
+
+    public function testTimerMaxTimeHasntPassed()
+    {
+        $stopwatch = new Stopwatch(10);
+        $stopwatch->start();
+
+        sleep(3);
+
+        $this->assertFalse($stopwatch->hasMaxTimePassed());
+    }
 }
